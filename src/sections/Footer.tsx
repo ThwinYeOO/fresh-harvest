@@ -1,4 +1,4 @@
-import { Leaf, MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: 'home' | 'shop' | 'product' | 'cart' | 'checkout' | 'login' | 'register' | 'orders' | 'admin') => void;

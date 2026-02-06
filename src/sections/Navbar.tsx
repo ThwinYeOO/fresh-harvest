@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ShoppingCart, User, Menu, X, Search, Leaf, ChevronDown } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Search, ChevronDown } from 'lucide-react';
 import { useCart } from '@/store/CartContext';
 import { useAuth } from '@/store/AuthContext';
 import { Button } from '@/components/ui/button';
