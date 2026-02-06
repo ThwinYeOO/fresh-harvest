@@ -51,11 +51,11 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4 text-emerald flex-shrink-0" />
-                <span>123 Farm Road, Green Valley, CA 90210</span>
+                <span>63 Clover Way BS34 8AZ Bristol UK</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Phone className="w-4 h-4 text-emerald flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+447714911273</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Mail className="w-4 h-4 text-emerald flex-shrink-0" />

@@ -298,7 +298,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                   </div>
                   <div className="p-4">
                     <p className="text-xs text-gray uppercase">{relatedProduct.category}</p>
-                    <p className="font-display font-semibold text-charcoal group-hover:text-emerald transition-colors line-clamp-1">>
+                    <p className="font-display font-semibold text-charcoal group-hover:text-emerald transition-colors line-clamp-1">
                       {relatedProduct.name}
                     </p>
                     <p className="font-display text-lg font-bold text-emerald mt-1">
