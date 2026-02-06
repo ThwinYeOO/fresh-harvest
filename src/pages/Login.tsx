@@ -44,11 +44,11 @@ export default function Login({ onNavigate }: LoginProps) {
             onClick={() => onNavigate('home')}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <div className="w-12 h-12 bg-forest rounded-full flex items-center justify-center">
-              <Leaf className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-full overflow-hidden">
+              <img src="/logo.jpg" alt="HtooHtoo logo" className="w-12 h-12 object-cover" />
             </div>
             <span className="font-display text-2xl font-bold text-charcoal">
-              Fresh<span className="text-forest">Harvest</span>
+              HtooHtoo
             </span>
           </button>
           <h1 className="font-display text-3xl font-bold text-charcoal mb-2">
@@ -142,7 +142,7 @@ export default function Login({ onNavigate }: LoginProps) {
             <p className="text-sm font-medium text-charcoal mb-2">Demo Credentials:</p>
             <div className="space-y-1 text-sm text-gray">
               <p><strong>Customer:</strong> customer@example.com / customer123</p>
-              <p><strong>Admin:</strong> admin@freshharvest.com / admin123</p>
+              <p><strong>Admin:</strong> admin@htoohtoo.com / admin123</p>
             </div>
           </div>
 

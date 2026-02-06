@@ -37,11 +37,11 @@ export default function Footer({ onNavigate }: FooterProps) {
               onClick={() => onNavigate('home')}
               className="flex items-center gap-2 mb-6"
             >
-              <div className="w-10 h-10 bg-forest rounded-full flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-full overflow-hidden">
+                <img src="/logo.jpg" alt="HtooHtoo logo" className="w-10 h-10 object-cover" />
               </div>
               <span className="font-display text-xl font-bold">
-                Fresh<span className="text-sunny">Harvest</span>
+                HtooHtoo
               </span>
             </button>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -59,7 +59,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Mail className="w-4 h-4 text-forest flex-shrink-0" />
-                <span>hello@freshharvest.com</span>
+                <span>hello@htoohtoo.com</span>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} FreshHarvest. All rights reserved.
+              &copy; {new Date().getFullYear()} HtooHtoo. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <a

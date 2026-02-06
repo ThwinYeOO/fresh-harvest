@@ -318,8 +318,8 @@ function TestimonialsSection() {
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-charcoal mb-4">
             What People <span className="text-forest">Say</span>
           </h2>
-          <p className="text-gray max-w-2xl mx-auto">
-            Hear from our satisfied customers about their FreshHarvest experience
+            <p className="text-gray max-w-2xl mx-auto">
+            Hear from our satisfied customers about their HtooHtoo experience
           </p>
         </div>
 
@@ -431,7 +431,7 @@ function InstagramSection() {
           <h2 className="font-display text-3xl lg:text-4xl font-bold text-charcoal mb-4">
             Follow Us on <span className="text-forest">Instagram</span>
           </h2>
-          <p className="font-accent text-2xl text-sunny">@freshharvest</p>
+          <p className="font-accent text-2xl text-sunny">@HtooHtoo</p>
         </div>
 
         <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-4">

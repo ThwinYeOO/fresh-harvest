@@ -144,7 +144,7 @@ export const testimonials: Testimonial[] = [
     name: 'Sarah Mitchell',
     avatar: '/testimonial-1.jpg',
     rating: 5,
-    text: 'FreshHarvest has completely transformed how I shop for groceries. The quality of their organic produce is unmatched, and delivery is always on time!',
+    text: 'HtooHtoo has completely transformed how I shop for groceries. The quality of their organic produce is unmatched, and delivery is always on time!',
     date: '2024-01-10',
   },
   {
@@ -160,7 +160,7 @@ export const testimonials: Testimonial[] = [
     name: 'Emily Roberts',
     avatar: '/testimonial-3.jpg',
     rating: 5,
-    text: 'As a busy mom, FreshHarvest saves me so much time. Fresh, organic produce delivered to my door - what more could I ask for?',
+    text: 'As a busy mom, HtooHtoo saves me so much time. Fresh, organic produce delivered to my door - what more could I ask for?',
     date: '2024-01-20',
   },
 ];

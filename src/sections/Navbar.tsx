@@ -59,11 +59,11 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             onClick={() => onNavigate('home')}
             className="flex items-center gap-2 group"
           >
-            <div className="w-10 h-10 bg-forest rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Leaf className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-full overflow-hidden group-hover:scale-110 transition-transform">
+              <img src="/logo.jpg" alt="HtooHtoo logo" className="w-10 h-10 object-cover" />
             </div>
             <span className="font-display text-xl lg:text-2xl font-bold text-charcoal">
-              Fresh<span className="text-forest">Harvest</span>
+              HtooHtoo
             </span>
           </button>
 

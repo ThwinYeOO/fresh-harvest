@@ -29,7 +29,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Mock users for demo
 const MOCK_USERS = [
-  { id: '1', email: 'admin@freshharvest.com', password: 'admin123', name: 'Admin User', role: 'admin' as const },
+  { id: '1', email: 'admin@htoohtoo.com', password: 'admin123', name: 'Admin User', role: 'admin' as const },
   { id: '2', email: 'customer@example.com', password: 'customer123', name: 'John Doe', role: 'customer' as const },
 ];
 
@@ -104,7 +104,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   // Load user from localStorage on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('freshharvest_user');
+    const savedUser = localStorage.getItem('htoohtoo_user');
     if (savedUser) {
       const user = JSON.parse(savedUser);
       dispatch({ type: 'LOGIN', payload: user });
@@ -119,7 +119,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (user) {
       const { password: _, ...userWithoutPassword } = user;
       dispatch({ type: 'LOGIN', payload: userWithoutPassword });
-      localStorage.setItem('freshharvest_user', JSON.stringify(userWithoutPassword));
+      localStorage.setItem('htoohtoo_user', JSON.stringify(userWithoutPassword));
       if (user.role === 'customer') {
         dispatch({ type: 'SET_ORDERS', payload: MOCK_ORDERS });
       }
@@ -141,19 +141,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
     MOCK_USERS.push({ ...newUser, password });
     dispatch({ type: 'LOGIN', payload: newUser });
-    localStorage.setItem('freshharvest_user', JSON.stringify(newUser));
+    localStorage.setItem('htoohtoo_user', JSON.stringify(newUser));
     return true;
   }, []);
 
   const logout = useCallback(() => {
     dispatch({ type: 'LOGOUT' });
-    localStorage.removeItem('freshharvest_user');
+    localStorage.removeItem('htoohtoo_user');
   }, []);
 
   const updateProfile = useCallback((data: Partial<User>) => {
     dispatch({ type: 'UPDATE_USER', payload: data });
     if (state.user) {
-      localStorage.setItem('freshharvest_user', JSON.stringify({ ...state.user, ...data }));
+      localStorage.setItem('htoohtoo_user', JSON.stringify({ ...state.user, ...data }));
     }
   }, [state.user]);
 
