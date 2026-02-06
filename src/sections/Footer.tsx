@@ -50,15 +50,15 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-gray-400">
-                <MapPin className="w-4 h-4 text-forest flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-emerald flex-shrink-0" />
                 <span>123 Farm Road, Green Valley, CA 90210</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
-                <Phone className="w-4 h-4 text-forest flex-shrink-0" />
+                <Phone className="w-4 h-4 text-emerald flex-shrink-0" />
                 <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
-                <Mail className="w-4 h-4 text-forest flex-shrink-0" />
+                <Mail className="w-4 h-4 text-emerald flex-shrink-0" />
                 <span>hello@htoohtoo.com</span>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <li key={link.label}>
                   <button
                     onClick={() => onNavigate(link.page)}
-                    className="text-gray-400 hover:text-sunny transition-colors text-sm"
+                    className="text-gray-400 hover:text-golden transition-colors text-sm"
                   >
                     {link.label}
                   </button>
@@ -89,7 +89,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <li key={link.label}>
                   <button
                     onClick={() => onNavigate(link.page)}
-                    className="text-gray-400 hover:text-sunny transition-colors text-sm"
+                    className="text-gray-400 hover:text-golden transition-colors text-sm"
                   >
                     {link.label}
                   </button>
@@ -106,7 +106,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <li key={link.label}>
                   <button
                     onClick={() => onNavigate(link.page)}
-                    className="text-gray-400 hover:text-sunny transition-colors text-sm"
+                    className="text-gray-400 hover:text-golden transition-colors text-sm"
                   >
                     {link.label}
                   </button>
@@ -127,25 +127,25 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="flex items-center gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-forest transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald transition-colors"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-forest transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-forest transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald transition-colors"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-forest transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald transition-colors"
               >
                 <Youtube className="w-4 h-4" />
               </a>

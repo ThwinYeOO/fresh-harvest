@@ -27,7 +27,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
             Please Sign In
           </h2>
           <p className="text-gray mb-6">You need to be signed in to view your orders</p>
-          <Button onClick={() => onNavigate('login')} className="bg-forest text-white">
+          <Button onClick={() => onNavigate('login')} className="bg-emerald text-white">
             Sign In
           </Button>
         </div>
@@ -41,7 +41,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
             onClick={() => onNavigate('home')}
-            className="flex items-center gap-2 text-gray hover:text-forest transition-colors mb-8"
+            className="flex items-center gap-2 text-gray hover:text-emerald transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
@@ -63,7 +63,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
             </p>
             <Button
               onClick={() => onNavigate('shop')}
-              className="bg-forest hover:bg-forest/90 text-white"
+              className="bg-emerald hover:bg-emerald/90 text-white"
             >
               Start Shopping
             </Button>
@@ -79,7 +79,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
         {/* Header */}
         <button
           onClick={() => onNavigate('home')}
-          className="flex items-center gap-2 text-gray hover:text-forest transition-colors mb-8"
+          className="flex items-center gap-2 text-gray hover:text-emerald transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -126,7 +126,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
 
                   <div className="flex items-center gap-4 lg:gap-8">
                     <div className="hidden sm:block text-right">
-                      <p className="font-display font-semibold text-forest">
+                      <p className="font-display font-semibold text-emerald">
                         ${order.total.toFixed(2)}
                       </p>
                       <p className="text-sm text-gray">
@@ -214,7 +214,7 @@ export default function OrderHistory({ onNavigate }: OrderHistoryProps) {
                         </div>
                         <div className="flex justify-between font-display text-lg font-bold pt-2 border-t border-gray-100">
                           <span>Total</span>
-                          <span className="text-forest">${order.total.toFixed(2)}</span>
+                          <span className="text-emerald">${order.total.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>

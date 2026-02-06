@@ -47,7 +47,7 @@ export default function Cart({ onNavigate }: CartProps) {
             </p>
             <Button
               onClick={() => onNavigate('shop')}
-              className="bg-forest hover:bg-forest/90 text-white"
+              className="bg-emerald hover:bg-emerald/90 text-white"
             >
               Start Shopping
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -68,7 +68,7 @@ export default function Cart({ onNavigate }: CartProps) {
           </h1>
           <button
             onClick={() => onNavigate('shop')}
-            className="flex items-center gap-2 text-gray hover:text-forest transition-colors"
+            className="flex items-center gap-2 text-gray hover:text-emerald transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Continue Shopping
@@ -101,7 +101,7 @@ export default function Cart({ onNavigate }: CartProps) {
                     <div>
                       <button
                         onClick={() => onNavigate('product', item.id)}
-                        className="font-display text-lg font-semibold text-charcoal hover:text-forest transition-colors line-clamp-1"
+                        className="font-display text-lg font-semibold text-charcoal hover:text-emerald transition-colors line-clamp-1"
                       >
                         {item.name}
                       </button>
@@ -121,14 +121,14 @@ export default function Cart({ onNavigate }: CartProps) {
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="w-8 h-8 flex items-center justify-center border border-gray-200 rounded-full hover:border-forest transition-colors"
+                        className="w-8 h-8 flex items-center justify-center border border-gray-200 rounded-full hover:border-emerald transition-colors"
                       >
                         <Minus className="w-4 h-4" />
                       </button>
                       <span className="w-8 text-center font-medium">{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="w-8 h-8 flex items-center justify-center border border-gray-200 rounded-full hover:border-forest transition-colors"
+                        className="w-8 h-8 flex items-center justify-center border border-gray-200 rounded-full hover:border-emerald transition-colors"
                       >
                         <Plus className="w-4 h-4" />
                       </button>
@@ -136,7 +136,7 @@ export default function Cart({ onNavigate }: CartProps) {
 
                     {/* Price */}
                     <div className="text-right">
-                      <p className="font-display text-xl font-bold text-forest">
+                      <p className="font-display text-xl font-bold text-emerald">
                         ${(item.price * item.quantity).toFixed(2)}
                       </p>
                       <p className="text-sm text-gray">
@@ -179,7 +179,7 @@ export default function Cart({ onNavigate }: CartProps) {
                   <span>${tax.toFixed(2)}</span>
                 </div>
                 {shippingCost > 0 && (
-                  <p className="text-sm text-forest">
+                  <p className="text-sm text-emerald">
                     Add ${(35 - totalPrice).toFixed(2)} more for free shipping!
                   </p>
                 )}
@@ -188,7 +188,7 @@ export default function Cart({ onNavigate }: CartProps) {
               <div className="border-t border-gray-100 pt-4 mb-6">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-lg font-semibold">Total</span>
-                  <span className="font-display text-2xl font-bold text-forest">
+                  <span className="font-display text-2xl font-bold text-emerald">
                     ${finalTotal.toFixed(2)}
                   </span>
                 </div>
@@ -196,7 +196,7 @@ export default function Cart({ onNavigate }: CartProps) {
 
               <Button
                 onClick={handleCheckout}
-                className="w-full bg-forest hover:bg-forest/90 text-white h-14"
+                className="w-full bg-emerald hover:bg-emerald/90 text-white h-14"
               >
                 Proceed to Checkout
                 <ArrowRight className="w-4 h-4 ml-2" />

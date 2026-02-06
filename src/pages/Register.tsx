@@ -193,7 +193,7 @@ export default function Register({ onNavigate }: RegisterProps) {
                 <button
                   type="button"
                   onClick={() => toast.info('Terms page coming soon!')}
-                  className="text-forest hover:underline"
+                  className="text-emerald hover:underline"
                 >
                   Terms of Service
                 </button>{' '}
@@ -201,7 +201,7 @@ export default function Register({ onNavigate }: RegisterProps) {
                 <button
                   type="button"
                   onClick={() => toast.info('Privacy policy coming soon!')}
-                  className="text-forest hover:underline"
+                  className="text-emerald hover:underline"
                 >
                   Privacy Policy
                 </button>
@@ -211,7 +211,7 @@ export default function Register({ onNavigate }: RegisterProps) {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-forest hover:bg-forest/90 text-white h-12"
+              className="w-full bg-emerald hover:bg-emerald/90 text-white h-12"
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
@@ -238,7 +238,7 @@ export default function Register({ onNavigate }: RegisterProps) {
                 'Save favorites',
               ].map((benefit) => (
                 <div key={benefit} className="flex items-center gap-2 text-sm text-gray">
-                  <Check className="w-4 h-4 text-forest" />
+                  <Check className="w-4 h-4 text-emerald" />
                   {benefit}
                 </div>
               ))}
@@ -260,7 +260,7 @@ export default function Register({ onNavigate }: RegisterProps) {
             Already have an account?{' '}
             <button
               onClick={() => onNavigate('login')}
-              className="text-forest font-medium hover:underline"
+              className="text-emerald font-medium hover:underline"
             >
               Sign in
             </button>

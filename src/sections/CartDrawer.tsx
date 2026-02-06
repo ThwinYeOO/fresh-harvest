@@ -25,7 +25,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-100">
             <div className="flex items-center gap-3">
-              <ShoppingBag className="w-5 h-5 text-forest" />
+              <ShoppingBag className="w-5 h-5 text-emerald" />
               <h2 className="font-display text-lg font-semibold text-charcoal">
                 Your Cart ({totalItems})
               </h2>
@@ -56,7 +56,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                     setCartOpen(false);
                     onNavigate('shop');
                   }}
-                  className="bg-forest hover:bg-forest/90 text-white"
+                  className="bg-emerald hover:bg-emerald/90 text-white"
                 >
                   Start Shopping
                 </Button>
@@ -83,7 +83,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                         {item.name}
                       </h4>
                       <p className="text-sm text-gray">{item.weight}</p>
-                      <p className="font-semibold text-forest mt-1">
+                      <p className="font-semibold text-emerald mt-1">
                         ${item.price.toFixed(2)}
                       </p>
 
@@ -91,7 +91,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                       <div className="flex items-center gap-2 mt-2">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="w-7 h-7 flex items-center justify-center bg-white rounded-full border border-gray-200 hover:border-forest transition-colors"
+                          className="w-7 h-7 flex items-center justify-center bg-white rounded-full border border-gray-200 hover:border-emerald transition-colors"
                         >
                           <Minus className="w-3 h-3" />
                         </button>
@@ -100,7 +100,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="w-7 h-7 flex items-center justify-center bg-white rounded-full border border-gray-200 hover:border-forest transition-colors"
+                          className="w-7 h-7 flex items-center justify-center bg-white rounded-full border border-gray-200 hover:border-emerald transition-colors"
                         >
                           <Plus className="w-3 h-3" />
                         </button>
@@ -137,7 +137,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                   setCartOpen(false);
                   onNavigate('checkout');
                 }}
-                className="w-full bg-forest hover:bg-forest/90 text-white h-12"
+                className="w-full bg-emerald hover:bg-emerald/90 text-white h-12"
               >
                 Proceed to Checkout
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -148,7 +148,7 @@ export default function CartDrawer({ onNavigate }: CartDrawerProps) {
                   onNavigate('cart');
                 }}
                 variant="outline"
-                className="w-full mt-2 border-forest text-forest hover:bg-forest/10"
+                className="w-full mt-2 border-emerald text-emerald hover:bg-emerald/10"
               >
                 View Full Cart
               </Button>

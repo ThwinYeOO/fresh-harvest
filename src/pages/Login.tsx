@@ -112,7 +112,7 @@ export default function Login({ onNavigate }: LoginProps) {
               <button
                 type="button"
                 onClick={() => toast.info('Password reset feature coming soon!')}
-                className="text-sm text-forest hover:underline"
+                className="text-sm text-emerald hover:underline"
               >
                 Forgot password?
               </button>
@@ -121,7 +121,7 @@ export default function Login({ onNavigate }: LoginProps) {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-forest hover:bg-forest/90 text-white h-12"
+              className="w-full bg-emerald hover:bg-emerald/90 text-white h-12"
             >
               {isLoading ? (
                 <span className="flex items-center gap-2">
@@ -161,7 +161,7 @@ export default function Login({ onNavigate }: LoginProps) {
             Don&apos;t have an account?{' '}
             <button
               onClick={() => onNavigate('register')}
-              className="text-forest font-medium hover:underline"
+              className="text-emerald font-medium hover:underline"
             >
               Create one
             </button>

@@ -75,13 +75,13 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 onClick={() => onNavigate(link.page)}
                 className={`font-medium transition-colors relative ${
                   currentPage === link.page
-                    ? 'text-forest'
-                    : 'text-gray hover:text-forest'
+                    ? 'text-emerald'
+                    : 'text-gray hover:text-emerald'
                 }`}
               >
                 {link.label}
                 {currentPage === link.page && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-forest rounded-full" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-emerald rounded-full" />
                 )}
               </button>
             ))}
@@ -96,7 +96,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 placeholder="Search fresh produce..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 bg-white/80 focus:bg-white focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20 transition-all"
+                className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 bg-white/80 focus:bg-white focus:border-emerald focus:outline-none focus:ring-2 focus:ring-emerald/20 transition-all"
               />
             </div>
           </form>
@@ -110,7 +110,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             >
               <ShoppingCart className="w-5 h-5 text-charcoal" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-sunny text-charcoal text-xs font-bold rounded-full flex items-center justify-center animate-bounce-soft">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-golden text-charcoal text-xs font-bold rounded-full flex items-center justify-center animate-bounce-soft">
                   {totalItems}
                 </span>
               )}
@@ -121,7 +121,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-full transition-colors">
-                    <div className="w-8 h-8 bg-forest rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-emerald rounded-full flex items-center justify-center">
                       <User className="w-4 h-4 text-white" />
                     </div>
                     <span className="hidden lg:block font-medium text-sm text-charcoal">
@@ -154,7 +154,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             ) : (
               <Button
                 onClick={() => onNavigate('login')}
-                className="hidden lg:flex bg-forest hover:bg-forest/90 text-white"
+                className="hidden lg:flex bg-emerald hover:bg-emerald/90 text-white"
               >
                 Sign In
               </Button>
@@ -187,7 +187,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 placeholder="Search fresh produce..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20"
+                className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:border-emerald focus:outline-none focus:ring-2 focus:ring-emerald/20"
               />
             </form>
 
@@ -202,7 +202,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                   }}
                   className={`px-4 py-3 rounded-lg text-left font-medium transition-colors ${
                     currentPage === link.page
-                      ? 'bg-forest/10 text-forest'
+                      ? 'bg-emerald/10 text-emerald'
                       : 'hover:bg-gray-100 text-charcoal'
                   }`}
                 >
@@ -219,7 +219,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                     onNavigate('login');
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-full bg-forest hover:bg-forest/90 text-white"
+                  className="w-full bg-emerald hover:bg-emerald/90 text-white"
                 >
                   Sign In
                 </Button>
@@ -229,7 +229,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                     setIsMobileMenuOpen(false);
                   }}
                   variant="outline"
-                  className="w-full border-forest text-forest hover:bg-forest/10"
+                  className="w-full border-emerald text-emerald hover:bg-emerald/10"
                 >
                   Create Account
                 </Button>

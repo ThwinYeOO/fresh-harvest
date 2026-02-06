@@ -77,7 +77,7 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
         {/* Header */}
         <button
           onClick={() => step === 'shipping' ? onNavigate('cart') : setStep('shipping')}
-          className="flex items-center gap-2 text-gray hover:text-forest transition-colors mb-8"
+          className="flex items-center gap-2 text-gray hover:text-emerald transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           {step === 'shipping' ? 'Back to Cart' : 'Back to Shipping'}
@@ -86,26 +86,26 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
         {/* Progress */}
         <div className="flex items-center justify-center mb-12">
           <div className="flex items-center gap-4">
-            <div className={`flex items-center gap-2 ${step === 'shipping' ? 'text-forest' : 'text-gray'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'shipping' ? 'bg-forest text-white' : 'bg-forest/20 text-forest'}`}>
+            <div className={`flex items-center gap-2 ${step === 'shipping' ? 'text-emerald' : 'text-gray'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'shipping' ? 'bg-emerald text-white' : 'bg-emerald/20 text-emerald'}`}>
                 <MapPin className="w-4 h-4" />
               </div>
               <span className="font-medium hidden sm:block">Shipping</span>
             </div>
             <div className="w-12 h-0.5 bg-gray-200">
-              <div className={`h-full bg-forest transition-all ${step !== 'shipping' ? 'w-full' : 'w-0'}`} />
+              <div className={`h-full bg-emerald transition-all ${step !== 'shipping' ? 'w-full' : 'w-0'}`} />
             </div>
-            <div className={`flex items-center gap-2 ${step === 'payment' ? 'text-forest' : 'text-gray'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'payment' ? 'bg-forest text-white' : step === 'confirmation' ? 'bg-forest/20 text-forest' : 'bg-gray-200'}`}>
+            <div className={`flex items-center gap-2 ${step === 'payment' ? 'text-emerald' : 'text-gray'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'payment' ? 'bg-emerald text-white' : step === 'confirmation' ? 'bg-emerald/20 text-emerald' : 'bg-gray-200'}`}>
                 <CreditCard className="w-4 h-4" />
               </div>
               <span className="font-medium hidden sm:block">Payment</span>
             </div>
             <div className="w-12 h-0.5 bg-gray-200">
-              <div className={`h-full bg-forest transition-all ${step === 'confirmation' ? 'w-full' : 'w-0'}`} />
+              <div className={`h-full bg-emerald transition-all ${step === 'confirmation' ? 'w-full' : 'w-0'}`} />
             </div>
-            <div className={`flex items-center gap-2 ${step === 'confirmation' ? 'text-forest' : 'text-gray'}`}>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'confirmation' ? 'bg-forest text-white' : 'bg-gray-200'}`}>
+            <div className={`flex items-center gap-2 ${step === 'confirmation' ? 'text-emerald' : 'text-gray'}`}>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step === 'confirmation' ? 'bg-emerald text-white' : 'bg-gray-200'}`}>
                 <Check className="w-4 h-4" />
               </div>
               <span className="font-medium hidden sm:block">Confirmation</span>
@@ -202,14 +202,14 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between font-display text-xl font-bold">
                     <span>Total</span>
-                    <span className="text-forest">${finalTotal.toFixed(2)}</span>
+                    <span className="text-emerald">${finalTotal.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-forest hover:bg-forest/90 text-white h-14"
+                className="w-full bg-emerald hover:bg-emerald/90 text-white h-14"
               >
                 Continue to Payment
               </Button>
@@ -226,10 +226,10 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
             <form onSubmit={handlePaymentSubmit} className="space-y-6">
               <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod}>
                 <div className="space-y-4">
-                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'card' ? 'border-forest bg-forest/5' : 'border-gray-200'}`}>
+                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'card' ? 'border-emerald bg-emerald/5' : 'border-gray-200'}`}>
                     <RadioGroupItem value="card" />
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-forest rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-emerald rounded-lg flex items-center justify-center">
                         <CreditCard className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -239,7 +239,7 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
                     </div>
                   </label>
 
-                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'paypal' ? 'border-forest bg-forest/5' : 'border-gray-200'}`}>
+                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'paypal' ? 'border-emerald bg-emerald/5' : 'border-gray-200'}`}>
                     <RadioGroupItem value="paypal" />
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
@@ -252,10 +252,10 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
                     </div>
                   </label>
 
-                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'cod' ? 'border-forest bg-forest/5' : 'border-gray-200'}`}>
+                  <label className={`flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-colors ${paymentMethod === 'cod' ? 'border-emerald bg-emerald/5' : 'border-gray-200'}`}>
                     <RadioGroupItem value="cod" />
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-sunny rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-golden rounded-lg flex items-center justify-center">
                         <Truck className="w-5 h-5 text-charcoal" />
                       </div>
                       <div>
@@ -289,14 +289,14 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
               <div className="bg-gray-light rounded-xl p-6">
                 <div className="flex justify-between font-display text-xl font-bold">
                   <span>Total to Pay</span>
-                  <span className="text-forest">${finalTotal.toFixed(2)}</span>
+                  <span className="text-emerald">${finalTotal.toFixed(2)}</span>
                 </div>
               </div>
 
               <Button
                 type="submit"
                 disabled={isProcessing}
-                className="w-full bg-forest hover:bg-forest/90 text-white h-14"
+                className="w-full bg-emerald hover:bg-emerald/90 text-white h-14"
               >
                 {isProcessing ? (
                   <span className="flex items-center gap-2">
@@ -314,7 +314,7 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
         {/* Confirmation Step */}
         {step === 'confirmation' && (
           <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-soft text-center">
-            <div className="w-20 h-20 bg-forest rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-emerald rounded-full flex items-center justify-center mx-auto mb-6">
               <Check className="w-10 h-10 text-white" />
             </div>
             <h2 className="font-display text-3xl font-bold text-charcoal mb-4">
@@ -327,14 +327,14 @@ export default function Checkout({ onNavigate }: CheckoutProps) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={() => onNavigate('orders')}
-                className="bg-forest hover:bg-forest/90 text-white"
+                className="bg-emerald hover:bg-emerald/90 text-white"
               >
                 View Order History
               </Button>
               <Button
                 onClick={() => onNavigate('shop')}
                 variant="outline"
-                className="border-forest text-forest hover:bg-forest/10"
+                className="border-emerald text-emerald hover:bg-emerald/10"
               >
                 Continue Shopping
               </Button>

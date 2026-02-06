@@ -10,8 +10,9 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        forest: "#3A7D44",
-        sunny: "#F9C846",
+        emerald: "#10B981",
+        violet: "#8B5CF6",
+        golden: "#FDB022",
         charcoal: "#1F2937",
         gray: {
           DEFAULT: "#4B5563",

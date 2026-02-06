@@ -12,23 +12,24 @@
     --card-foreground: 215 28% 17%;
     --popover: 0 0% 100%;
     --popover-foreground: 215 28% 17%;
-    --primary: 129 35% 36%;
+    --primary: 160 84% 39%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 45 93% 63%;
+    --secondary: 37 92% 50%;
     --secondary-foreground: 215 28% 17%;
     --muted: 220 14% 96%;
     --muted-foreground: 215 14% 34%;
-    --accent: 45 93% 63%;
-    --accent-foreground: 215 28% 17%;
+    --accent: 265 88% 57%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 129 35% 36%;
+    --ring: 160 84% 39%;
     --radius: 0.625rem;
     
-    --color-forest: #3A7D44;
-    --color-sunny: #F9C846;
+    --color-emerald: #10B981;
+    --color-violet: #8B5CF6;
+    --color-golden: #FDB022;
     --color-charcoal: #1F2937;
     --color-gray: #4B5563;
     --color-light-gray: #F3F4F6;
@@ -61,17 +62,23 @@
   .font-accent {
     font-family: 'Pacifico', cursive;
   }
-  .text-forest {
-    color: var(--color-forest);
+  .text-emerald {
+    color: var(--color-emerald);
   }
-  .text-sunny {
-    color: var(--color-sunny);
+  .text-violet {
+    color: var(--color-violet);
   }
-  .bg-forest {
-    background-color: var(--color-forest);
+  .text-golden {
+    color: var(--color-golden);
   }
-  .bg-sunny {
-    background-color: var(--color-sunny);
+  .bg-emerald {
+    background-color: var(--color-emerald);
+  }
+  .bg-violet {
+    background-color: var(--color-violet);
+  }
+  .bg-golden {
+    background-color: var(--color-golden);
   }
   .hover-lift {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -94,7 +101,7 @@
     50% { transform: translateY(-10px); }
   }
   .gradient-text {
-    background: linear-gradient(135deg, var(--color-forest), var(--color-sunny));
+    background: linear-gradient(135deg, var(--color-emerald), var(--color-golden));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -109,11 +116,11 @@
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-forest);
+  background: var(--color-emerald);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d6135;
+  background: #059669;
 }
 
 /* Pattern background */

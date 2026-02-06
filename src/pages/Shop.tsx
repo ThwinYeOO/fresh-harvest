@@ -81,7 +81,7 @@ export default function Shop({ onNavigate }: ShopProps) {
         {/* Header */}
         <div className="mb-8">
           <h1 className="font-display text-3xl lg:text-4xl font-bold text-charcoal mb-4">
-            Our <span className="text-forest">Products</span>
+            Our <span className="text-emerald">Products</span>
           </h1>
           <p className="text-gray max-w-2xl">
             Browse our selection of fresh, organic produce sourced directly from local farms
@@ -127,13 +127,13 @@ export default function Shop({ onNavigate }: ShopProps) {
             <div className="hidden sm:flex items-center border rounded-md">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-3 ${viewMode === 'grid' ? 'bg-forest text-white' : 'hover:bg-gray-100'}`}
+                className={`p-3 ${viewMode === 'grid' ? 'bg-emerald text-white' : 'hover:bg-gray-100'}`}
               >
                 <Grid3X3 className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-3 ${viewMode === 'list' ? 'bg-forest text-white' : 'hover:bg-gray-100'}`}
+                className={`p-3 ${viewMode === 'list' ? 'bg-emerald text-white' : 'hover:bg-gray-100'}`}
               >
                 <LayoutList className="w-4 h-4" />
               </button>
@@ -198,14 +198,14 @@ export default function Shop({ onNavigate }: ShopProps) {
               <Button
                 onClick={clearFilters}
                 variant="outline"
-                className="w-full border-forest text-forest hover:bg-forest/10"
+                className="w-full border-emerald text-emerald hover:bg-emerald/10"
               >
                 Clear Filters
               </Button>
 
               <Button
                 onClick={() => setShowFilters(false)}
-                className="w-full mt-3 lg:hidden bg-forest text-white"
+                className="w-full mt-3 lg:hidden bg-emerald text-white"
               >
                 Apply Filters
               </Button>
@@ -284,18 +284,18 @@ function ProductCard({ product, viewMode, onNavigate, onAddToCart }: ProductCard
               <p className="text-xs text-gray uppercase">{product.category}</p>
               <button
                 onClick={() => onNavigate('product', product.id)}
-                className="font-display text-lg font-semibold text-charcoal hover:text-forest transition-colors"
+                className="font-display text-lg font-semibold text-charcoal hover:text-emerald transition-colors"
               >
                 {product.name}
               </button>
               <div className="flex items-center gap-1 mt-1">
-                <Star className="w-4 h-4 text-sunny fill-current" />
+                <Star className="w-4 h-4 text-golden fill-current" />
                 <span className="text-sm">{product.rating}</span>
                 <span className="text-sm text-gray">({product.reviews})</span>
               </div>
             </div>
             <div className="text-right">
-              <p className="font-display text-xl font-bold text-forest">
+              <p className="font-display text-xl font-bold text-emerald">
                 ${product.price.toFixed(2)}
               </p>
               {product.originalPrice && (
@@ -309,7 +309,7 @@ function ProductCard({ product, viewMode, onNavigate, onAddToCart }: ProductCard
           <div className="mt-auto pt-3">
             <Button
               onClick={() => onAddToCart(product)}
-              className="bg-forest hover:bg-forest/90 text-white"
+              className="bg-emerald hover:bg-emerald/90 text-white"
             >
               <ShoppingCart className="w-4 h-4 mr-2" />
               Add to Cart
@@ -332,7 +332,7 @@ function ProductCard({ product, viewMode, onNavigate, onAddToCart }: ProductCard
           className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110"
         />
         {product.originalPrice && (
-          <span className="absolute top-3 left-3 bg-sunny text-charcoal text-xs font-bold px-2 py-1 rounded-full">
+          <span className="absolute top-3 left-3 bg-golden text-charcoal text-xs font-bold px-2 py-1 rounded-full">
             SALE
           </span>
         )}
@@ -341,17 +341,17 @@ function ProductCard({ product, viewMode, onNavigate, onAddToCart }: ProductCard
         <p className="text-xs text-gray uppercase">{product.category}</p>
         <button
           onClick={() => onNavigate('product', product.id)}
-          className="font-display font-semibold text-charcoal hover:text-forest transition-colors line-clamp-1"
+          className="font-display font-semibold text-charcoal hover:text-emerald transition-colors line-clamp-1"
         >
           {product.name}
         </button>
         <div className="flex items-center gap-1 mt-1">
-          <Star className="w-4 h-4 text-sunny fill-current" />
+          <Star className="w-4 h-4 text-golden fill-current" />
           <span className="text-sm">{product.rating}</span>
         </div>
         <div className="flex items-center justify-between mt-3">
           <div>
-            <span className="font-display text-lg font-bold text-forest">
+            <span className="font-display text-lg font-bold text-emerald">
               ${product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
@@ -362,7 +362,7 @@ function ProductCard({ product, viewMode, onNavigate, onAddToCart }: ProductCard
           </div>
           <button
             onClick={() => onAddToCart(product)}
-            className="w-10 h-10 bg-forest text-white rounded-full flex items-center justify-center hover:bg-forest/90 transition-colors"
+            className="w-10 h-10 bg-emerald text-white rounded-full flex items-center justify-center hover:bg-emerald/90 transition-colors"
           >
             <ShoppingCart className="w-4 h-4" />
           </button>

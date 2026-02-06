@@ -26,7 +26,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
             Product Not Found
           </h2>
           <p className="text-gray mb-6">The product you&apos;re looking for doesn&apos;t exist.</p>
-          <Button onClick={() => onNavigate('shop')} className="bg-forest text-white">
+          <Button onClick={() => onNavigate('shop')} className="bg-emerald text-white">
             Back to Shop
           </Button>
         </div>
@@ -56,7 +56,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
         {/* Breadcrumb */}
         <button
           onClick={() => onNavigate('shop')}
-          className="flex items-center gap-2 text-gray hover:text-forest transition-colors mb-6"
+          className="flex items-center gap-2 text-gray hover:text-emerald transition-colors mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Shop
@@ -79,11 +79,11 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
           <div className="space-y-6">
             {/* Category & Rating */}
             <div className="flex items-center gap-4">
-              <span className="px-3 py-1 bg-forest/10 text-forest text-sm font-medium rounded-full">
+              <span className="px-3 py-1 bg-emerald/10 text-emerald text-sm font-medium rounded-full">
                 {product.category}
               </span>
               <div className="flex items-center gap-1">
-                <Star className="w-5 h-5 text-sunny fill-current" />
+                <Star className="w-5 h-5 text-golden fill-current" />
                 <span className="font-medium">{product.rating}</span>
                 <span className="text-gray">({product.reviews} reviews)</span>
               </div>
@@ -96,7 +96,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
 
             {/* Price */}
             <div className="flex items-center gap-4">
-              <span className="font-display text-3xl font-bold text-forest">
+              <span className="font-display text-3xl font-bold text-emerald">
                 ${product.price.toFixed(2)}
               </span>
               {product.originalPrice && (
@@ -104,7 +104,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                   <span className="text-xl text-gray line-through">
                     ${product.originalPrice.toFixed(2)}
                   </span>
-                  <span className="px-2 py-1 bg-sunny text-charcoal text-sm font-bold rounded-full">
+                  <span className="px-2 py-1 bg-golden text-charcoal text-sm font-bold rounded-full">
                     {Math.round((1 - product.price / product.originalPrice) * 100)}% OFF
                   </span>
                 </>
@@ -119,15 +119,15 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
             {/* Features */}
             <div className="grid grid-cols-3 gap-4 py-4 border-y border-gray-100">
               <div className="text-center">
-                <Truck className="w-6 h-6 text-forest mx-auto mb-2" />
+                <Truck className="w-6 h-6 text-emerald mx-auto mb-2" />
                 <p className="text-sm text-gray">Free Delivery</p>
               </div>
               <div className="text-center">
-                <Shield className="w-6 h-6 text-forest mx-auto mb-2" />
+                <Shield className="w-6 h-6 text-emerald mx-auto mb-2" />
                 <p className="text-sm text-gray">Quality Guaranteed</p>
               </div>
               <div className="text-center">
-                <RotateCcw className="w-6 h-6 text-forest mx-auto mb-2" />
+                <RotateCcw className="w-6 h-6 text-emerald mx-auto mb-2" />
                 <p className="text-sm text-gray">Easy Returns</p>
               </div>
             </div>
@@ -140,14 +140,14 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:border-forest transition-colors"
+                    className="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:border-emerald transition-colors"
                   >
                     <Minus className="w-4 h-4" />
                   </button>
                   <span className="w-12 text-center font-medium text-lg">{quantity}</span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:border-forest transition-colors"
+                    className="w-10 h-10 flex items-center justify-center border border-gray-200 rounded-full hover:border-emerald transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -159,7 +159,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                 <Button
                   onClick={handleAddToCart}
                   size="lg"
-                  className="flex-1 bg-forest hover:bg-forest/90 text-white h-14"
+                  className="flex-1 bg-emerald hover:bg-emerald/90 text-white h-14"
                 >
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   Add to Cart
@@ -232,7 +232,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                   {[1, 2, 3].map((review) => (
                     <div key={review} className="border-b border-gray-100 pb-6 last:border-0">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-forest rounded-full flex items-center justify-center text-white font-medium">
+                        <div className="w-10 h-10 bg-emerald rounded-full flex items-center justify-center text-white font-medium">
                           {String.fromCharCode(64 + review)}
                         </div>
                         <div>
@@ -241,7 +241,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`w-4 h-4 ${i < 4 ? 'text-sunny fill-current' : 'text-gray-300'}`}
+                                className={`w-4 h-4 ${i < 4 ? 'text-golden fill-current' : 'text-gray-300'}`}
                               />
                             ))}
                           </div>
@@ -280,7 +280,7 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
         {relatedProducts.length > 0 && (
           <div>
             <h2 className="font-display text-2xl font-bold text-charcoal mb-6">
-              You May Also <span className="text-forest">Like</span>
+              You May Also <span className="text-emerald">Like</span>
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
               {relatedProducts.map((relatedProduct) => (
@@ -298,10 +298,10 @@ export default function ProductDetail({ productId, onNavigate }: ProductDetailPr
                   </div>
                   <div className="p-4">
                     <p className="text-xs text-gray uppercase">{relatedProduct.category}</p>
-                    <p className="font-display font-semibold text-charcoal group-hover:text-forest transition-colors line-clamp-1">
+                    <p className="font-display font-semibold text-charcoal group-hover:text-emerald transition-colors line-clamp-1">>
                       {relatedProduct.name}
                     </p>
-                    <p className="font-display text-lg font-bold text-forest mt-1">
+                    <p className="font-display text-lg font-bold text-emerald mt-1">
                       ${relatedProduct.price.toFixed(2)}
                     </p>
                   </div>

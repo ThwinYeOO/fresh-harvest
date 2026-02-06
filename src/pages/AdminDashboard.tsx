@@ -23,7 +23,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
             Access Denied
           </h2>
           <p className="text-gray mb-6">You don&apos;t have permission to access this page</p>
-          <Button onClick={() => onNavigate('home')} className="bg-forest text-white">
+          <Button onClick={() => onNavigate('home')} className="bg-emerald text-white">
             Go Home
           </Button>
         </div>
@@ -72,7 +72,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
           <div>
             <button
               onClick={() => onNavigate('home')}
-              className="flex items-center gap-2 text-gray hover:text-forest transition-colors mb-2"
+              className="flex items-center gap-2 text-gray hover:text-emerald transition-colors mb-2"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -82,7 +82,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
             </h1>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-forest rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-emerald rounded-full flex items-center justify-center">
               <span className="text-white font-medium">{user?.name?.charAt(0)}</span>
             </div>
             <div>
@@ -104,7 +104,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
               onClick={() => setActiveTab(tab.id as typeof activeTab)}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab.id
-                  ? 'bg-forest text-white'
+                  ? 'bg-emerald text-white'
                   : 'bg-white text-gray hover:bg-gray-100'
               }`}
             >
@@ -141,7 +141,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                 <h2 className="font-display text-xl font-semibold">Recent Orders</h2>
                 <button
                   onClick={() => setActiveTab('orders')}
-                  className="text-forest hover:underline text-sm"
+                  className="text-emerald hover:underline text-sm"
                 >
                   View All
                 </button>
@@ -162,7 +162,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                       <tr key={order.id} className="border-b border-gray-50 last:border-0">
                         <td className="py-3 px-4 font-medium">{order.id}</td>
                         <td className="py-3 px-4">{order.customer}</td>
-                        <td className="py-3 px-4 font-medium text-forest">${order.total.toFixed(2)}</td>
+                        <td className="py-3 px-4 font-medium text-emerald">${order.total.toFixed(2)}</td>
                         <td className="py-3 px-4">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             order.status === 'delivered' ? 'bg-green-100 text-green-600' :
@@ -183,7 +183,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
 
             {/* Quick Actions */}
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-forest to-green-600 rounded-xl p-6 text-white">
+              <div className="bg-gradient-to-br from-emerald to-green-600 rounded-xl p-6 text-white">
                 <TrendingUp className="w-8 h-8 mb-4" />
                 <h3 className="font-display text-xl font-semibold mb-2">Sales Overview</h3>
                 <p className="opacity-90 mb-4">Your store is performing well this month!</p>
@@ -192,7 +192,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                   <span className="text-sm opacity-75">vs last month</span>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-sunny to-orange-400 rounded-xl p-6 text-charcoal">
+              <div className="bg-gradient-to-br from-golden to-orange-400 rounded-xl p-6 text-charcoal">
                 <Package className="w-8 h-8 mb-4" />
                 <h3 className="font-display text-xl font-semibold mb-2">Inventory Status</h3>
                 <p className="mb-4">All products are well stocked</p>
@@ -226,7 +226,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                 </div>
                 <Button
                   onClick={handleAddProduct}
-                  className="bg-forest hover:bg-forest/90 text-white"
+                  className="bg-emerald hover:bg-emerald/90 text-white"
                 >
                   <Plus className="w-4 h-4 mr-2" />
                   Add Product
@@ -261,7 +261,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                         </div>
                       </td>
                       <td className="py-3 px-4">{product.category}</td>
-                      <td className="py-3 px-4 font-medium text-forest">${product.price.toFixed(2)}</td>
+                      <td className="py-3 px-4 font-medium text-emerald">${product.price.toFixed(2)}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                           product.inStock ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
@@ -314,7 +314,7 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                     <tr key={order.id} className="border-b border-gray-50 last:border-0">
                       <td className="py-3 px-4 font-medium">{order.id}</td>
                       <td className="py-3 px-4">{order.customer}</td>
-                      <td className="py-3 px-4 font-medium text-forest">${order.total.toFixed(2)}</td>
+                      <td className="py-3 px-4 font-medium text-emerald">${order.total.toFixed(2)}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                           order.status === 'delivered' ? 'bg-green-100 text-green-600' :
